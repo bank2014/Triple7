@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!-- saved from url=(0026)https://uat.pesosluck.com/ -->
 <html lang="en" data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
 <script id="youtube-hd-fjdmkanbdloodhegphphhklnjfngoffa">var ythdlog = () => { };; var ythderror = () => { };</script>
 
@@ -182,6 +181,8 @@
 	<link rel="prefetch" href="https://uat.pesosluck.com/images/point_bg.png" as="image" type="image/png">
 	<link rel="prefetch" href="./register_files/ribbon.png" as="image" type="image/png">
 
+	<script src="https://unpkg.com/htmx.org@1.9.5"></script>
+	<script src="https://cdn.tailwindcss.com"></script>
 	<script src="./register_files/spine-player.js.다운로드" async=""></script>
 	<script type="module" crossorigin="" src="./register_files/index-7f250f7b.js.다운로드"></script>
 	<link rel="stylesheet" href="./register_files/index-f91f0c75.css">
@@ -190028,28 +190029,24 @@
 											<div class="items-image flex-col p-4 gap-2">
 												<div class="text-md lg:text-2xl uppercase">Authentication</div>
 												<div class="w-full h-full overflow-y-auto p-2 mb-24">
-													<div class="flex space-x-2 rounded-xl bg-black p-2 uppercase"
-														role="tablist" aria-orientation="horizontal">
+													<div class="flex space-x-2 rounded-xl bg-black p-2" role="tablist"
+														aria-orientation="horizontal">
 
-														<button id="login"
+
+														<!--로그인/회원가입-->
+														<a type="button" href="login.html" hx-boost="true"
 															class="w-full rounded-lg py-2.5 text-sm font-medium leading-5 text-white hover:bg-white/[0.12]"
-															id="headlessui-tabs-tab-:r5:" role="tab" type="button"
+															id="headlessui-tabs-tab-:rh:" role="tab"
 															aria-selected="false" tabindex="-1" data-headlessui-state=""
-															aria-controls="headlessui-tabs-panel-:r7:">Log In
-														</button>
-														<script>
-															document.getElementById('login').addEventListener('click', function () {
-																window.location.href = 'login.html';
-															});
-														</script>
-
-														<button
+															aria-controls="headlessui-tabs-panel-:rj:">Login
+														</a>
+														<a type="button" hx-boost="true"
 															class="w-full rounded-lg py-2.5 text-sm font-medium leading-5 bg-green-900 shadow"
-															id="headlessui-tabs-tab-:r6:" role="tab" type="button"
+															id="headlessui-tabs-tab-:r6:" role="tab"
 															aria-selected="true" tabindex="0"
 															data-headlessui-state="selected"
 															aria-controls="headlessui-tabs-panel-:r8:">Register
-														</button>
+														</a>
 
 
 													</div>
@@ -190081,7 +190078,8 @@
 																			class="w-full flex justify-between items-center bg-black/50 py-2 px-3 rounded-xl h-12"
 																			type="password" placeholder=""
 																			autocomplete="new-password" minlength="6"
-																			required="" value=""></div>
+																			required="" value="">
+																	</div>
 																</div>
 																<div class="w-full flex flex-col gap-2 items-start">
 																	Confirm Password<div
@@ -190091,37 +190089,31 @@
 																			autocomplete="new-password" minlength="6"
 																			required="" value=""></div>
 																</div>
-																<div><button type="submit"
-																		class="bg-button text-button py-1 px-3 rounded-sm overflow-hidden text-ellipsis text-sm shadow-sm shadow-orange-900 font-normal transition-all active:shadow-none active:translate-y-0.5 rounded-xl py-2 px-3 !text-md">Confirm</button>
+																<!--컨펌 버튼-->
+																<div>
+																	<button type="submit" class="bg-orange-400 text-button py-1 px-3 rounded-sm overflow-hidden text-ellipsis text-sm shadow-sm shadow-orange-900 
+																		font-normal transition-all active:shadow-none active:translate-y-0.5 rounded-xl py-2 px-3 !text-md">
+																		Confirm
+																	</button>
 																</div>
 															</form>
-
-															<button id="verify" class="mt-4 underline">Verify your phone?</button>
-															<script>
-																window.onload = function() {
-																	document.getElementById('verify').addEventListener('click', function() {
-																		alert('미구현 상태입니다');
-																	});
-																}
-															</script>
+															<div>
+																<button id="verify" class="mt-4 underline">Verify your
+																	phone?</button>
+															</div>
 
 														</div>
 													</div>
 												</div>
 											</div>
-											
-											<button id="return" type="button"
-												class="absolute bottom-16 left-0 w-full flex justify-center filter hover:brightness-125 active:scale-90"><img
-													draggable="false" src="./register_files/modal_close_btn.png" alt=""
-													width="48">
-											</button>
-											<script>
-												document.getElementById('return').addEventListener('click', function () {
-													window.location.href = 'Triple7.html';
-												});
-											</script>
+											<div>
+												<a type="button" href="./Triple7.html" hx-boost="true"
+													class="absolute bottom-16 left-0 w-full flex justify-center filter hover:brightness-125 active:scale-90"><img
+														draggable="false" src="./register_files/modal_close_btn.png"
+														alt="" width="48">
+												</a>
+											</div>
 
-											
 										</div>
 									</div>
 								</div><button type="button"
@@ -190375,7 +190367,8 @@
 													class="animate-jackpot">
 												<div class="items-center-image">
 													<div class="bg-black/50 px-2 mt-8 text-center rounded-full text-md">
-														<span class="leading-none">6K</span></div>
+														<span class="leading-none">6K</span>
+													</div>
 												</div>
 											</div>
 											<div class="relative" style="width: 120px; max-width: 26%;"><img
@@ -190383,7 +190376,8 @@
 													class="animate-jackpot">
 												<div class="items-center-image">
 													<div class="bg-black/50 px-2 mt-8 text-center rounded-full text-xl">
-														<span class="leading-none">189.2K</span></div>
+														<span class="leading-none">189.2K</span>
+													</div>
 												</div>
 											</div>
 											<div class="relative" style="width: 80px; max-width: 20%;"><img
@@ -190391,7 +190385,8 @@
 													class="animate-jackpot">
 												<div class="items-center-image">
 													<div class="bg-black/50 px-2 mt-8 text-center rounded-full text-md">
-														<span class="leading-none">39</span></div>
+														<span class="leading-none">39</span>
+													</div>
 												</div>
 											</div>
 										</div>
@@ -190411,7 +190406,8 @@
 													alt="Your bet" width="85%">
 												<div
 													class="image-label text-sm xs:text-lg !items-end pb-0.5 xs:pb-1 sm:pb-1.5">
-													<span class="leading-none">0</span></div>
+													<span class="leading-none">0</span>
+												</div>
 											</div>
 										</div>
 									</button><button class="relative group">
@@ -190425,7 +190421,8 @@
 													alt="Your bet" width="85%">
 												<div
 													class="image-label text-sm xs:text-lg !items-end pb-0.5 xs:pb-1 sm:pb-1.5">
-													<span class="leading-none">0</span></div>
+													<span class="leading-none">0</span>
+												</div>
 											</div>
 										</div>
 									</button><button class="relative group">
@@ -190439,7 +190436,8 @@
 													alt="Your bet" width="85%">
 												<div
 													class="image-label text-sm xs:text-lg !items-end pb-0.5 xs:pb-1 sm:pb-1.5">
-													<span class="leading-none">0</span></div>
+													<span class="leading-none">0</span>
+												</div>
 											</div>
 										</div>
 									</button></div>
